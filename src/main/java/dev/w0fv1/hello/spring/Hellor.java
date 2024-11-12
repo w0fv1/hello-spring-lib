@@ -1,14 +1,16 @@
 package dev.w0fv1.hello.spring;
 
+import org.springframework.stereotype.Component;
+
 public class Hellor {
 
-    private final String content;
+    private final HellorProperties hellorProperties;
 
-    public Hellor(String content) {
-        this.content = content;
+    public Hellor(HellorProperties hellorProperties) {
+        this.hellorProperties = hellorProperties;
     }
 
     public void say() {
-        System.out.println("Hello, " + content + "!");
+        System.out.println("Hello, " + hellorProperties.getContent() + "!");
     }
 }
